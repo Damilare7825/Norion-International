@@ -8,8 +8,6 @@ export interface GalleryMediaItem {
   caption: string;
   mediaSrc: string;
   posterSrc?: string;
-  isPlaceholderImage?: boolean;
-  placeholderAlt?: string;
 }
 
 export const galleryCategories = ["All", "Outreach", "Empowerment", "Community", "Events"] as const;
@@ -25,6 +23,7 @@ export const galleryItems: GalleryMediaItem[] = [
     locationBadge: "BENIN CITY, EDO STATE",
     caption:
       "Documentary broadcast recording of the Christmas outreach at Naomi Gardens, Benin City. Providing food staples, cash gifts, and business startup funds to 9 widows.",
+    posterSrc: "/images/christmas-outreach-2023/group-at-christmas-outreach.webp",
     mediaSrc: "/videos/christmas-outreach-2023.mp4",
   },
   {
@@ -36,6 +35,7 @@ export const galleryItems: GalleryMediaItem[] = [
     locationBadge: "EDO STATE",
     caption:
       "Peter Nosa Ighodaro meeting with market women and widows in the marketplace, providing direct financial startup assistance and celebrating new beginnings.",
+    posterSrc: "/images/christmas-outreach-2023/widow-business-support.webp",
     mediaSrc: "/videos/business-grant-empowerment.mp4",
   },
   {
@@ -47,6 +47,7 @@ export const galleryItems: GalleryMediaItem[] = [
     locationBadge: "BENIN CITY",
     caption:
       "Direct distribution of fresh tubers of yam and vital pantry provisions to local widows confronting severe economic difficulty.",
+    posterSrc: "/images/christmas-outreach-2023/food-provisions.webp",
     mediaSrc: "/videos/food-distribution-widows.mp4",
   },
   {

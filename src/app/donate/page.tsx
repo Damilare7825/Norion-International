@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   title: "Donate & Support | Direct Bank Transfer",
   description:
     "Support the humanitarian mission of Norion Caritas Foundation through direct Zenith Bank domestic transfer. 100% of verified contributions go toward food relief and widow startup capital.",
+  alternates: { canonical: "/donate" },
+  openGraph: { type: "website", locale: "en_NG", siteName: "Norion Caritas Foundation", title: "Donate & Support | Direct Bank Transfer", description: "Support the humanitarian mission of Norion Caritas Foundation through direct Zenith Bank domestic transfer. 100% of verified contributions go toward food relief and widow startup capital.", url: "/donate" },
+  twitter: { card: "summary_large_image", title: "Donate & Support | Direct Bank Transfer", description: "Support the humanitarian mission of Norion Caritas Foundation through direct Zenith Bank domestic transfer. 100% of verified contributions go toward food relief and widow startup capital.", images: ["/images/norion-social-card.webp"] },
+
 };
 
 export default function DonatePage() {
@@ -47,7 +51,7 @@ export default function DonatePage() {
                     <Building2 className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <span className="font-mono text-xs uppercase tracking-widest text-[#0088C9] font-bold">
+                    <span className="font-mono text-xs uppercase tracking-widest text-[#45BCE7] font-bold">
                       Direct Domestic Transfer
                     </span>
                     <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white">
@@ -81,7 +85,7 @@ export default function DonatePage() {
                 </div>
 
                 <div className="space-y-1 md:col-span-1">
-                  <span className="text-xs font-mono text-[#0088C9] uppercase tracking-wider font-semibold">
+                  <span className="text-xs font-mono text-[#45BCE7] uppercase tracking-wider font-semibold">
                     Account Number
                   </span>
                   <p className="font-mono text-2xl font-extrabold text-emerald-300 tracking-wider">

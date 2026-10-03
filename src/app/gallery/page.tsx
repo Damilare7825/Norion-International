@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Documentary Video Gallery",
   description:
     "View authentic video documentation of Norion Caritas Foundation outreach in Benin City, Edo State and Nigerian communities.",
+  alternates: { canonical: "/gallery" },
+  openGraph: { type: "website", locale: "en_NG", siteName: "Norion Caritas Foundation", title: "Documentary Video Gallery", description: "View authentic video documentation of Norion Caritas Foundation outreach in Benin City, Edo State and Nigerian communities.", url: "/gallery" },
+  twitter: { card: "summary_large_image", title: "Documentary Video Gallery", description: "View authentic video documentation of Norion Caritas Foundation outreach in Benin City, Edo State and Nigerian communities.", images: ["/images/norion-social-card.webp"] },
+
 };
 
 export default function GalleryPage() {

@@ -16,12 +16,10 @@ export function VisualStory() {
               <div className="relative w-full aspect-4/3 bg-neutral-900 border border-[#E8E8E2] overflow-hidden shadow-md">
                 <video
                   src="/videos/widows-worship-support.mp4"
-                  autoPlay
-                  loop
                   muted
                   playsInline
                   className="w-full h-full object-cover"
-                />
+                poster="/images/video-poster.webp" controls preload="none" />
                 <div className="absolute top-4 left-4 bg-[#102A43]/90 text-white font-mono text-[11px] px-2.5 py-1 tracking-wider uppercase">
                   Community Assembly • Edo State
                 </div>
@@ -31,12 +29,10 @@ export function VisualStory() {
               <div className="hidden sm:block absolute -bottom-10 -right-6 w-3/5 aspect-4/3 bg-[#F7F7F4] border-4 border-white shadow-xl overflow-hidden">
                 <video
                   src="/videos/business-grant-empowerment.mp4"
-                  autoPlay
-                  loop
                   muted
                   playsInline
                   className="w-full h-full object-cover"
-                />
+                poster="/images/video-poster.webp" controls preload="none" />
                 <div className="absolute bottom-2 left-2 bg-[#087A5B] text-white font-mono text-[10px] px-2 py-0.5 tracking-wider uppercase">
                   Marketplace Grant
                 </div>

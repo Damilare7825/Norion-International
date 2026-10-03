@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "Documented Impact | Real Field Activities & Outreaches",
   description:
     "Explore the documented humanitarian activities of Norion Caritas Foundation, including the 2023 Christmas Outreach for Widows in Edo State, food distributions, and micro-business seed grants.",
+  alternates: { canonical: "/impact" },
+  openGraph: { type: "website", locale: "en_NG", siteName: "Norion Caritas Foundation", title: "Documented Impact | Real Field Activities & Outreaches", description: "Explore the documented humanitarian activities of Norion Caritas Foundation, including the 2023 Christmas Outreach for Widows in Edo State, food distributions, and micro-business seed grants.", url: "/impact" },
+  twitter: { card: "summary_large_image", title: "Documented Impact | Real Field Activities & Outreaches", description: "Explore the documented humanitarian activities of Norion Caritas Foundation, including the 2023 Christmas Outreach for Widows in Edo State, food distributions, and micro-business seed grants.", images: ["/images/norion-social-card.webp"] },
+
 };
 
 export default function ImpactPage() {
@@ -41,21 +45,20 @@ export default function ImpactPage() {
                     <span className="w-2 h-2 rounded-full bg-[#087A5B]" />
                     <span className="text-white font-bold">PRIMARY DOCUMENTARY RECORD</span>
                   </span>
-                  <span className="text-[#0088C9]">{featuredImpact.dateBadge}</span>
+                  <span className="text-[#45BCE7]">{featuredImpact.dateBadge}</span>
                 </div>
 
                 <div className="relative aspect-video bg-black overflow-hidden">
                   <video
                     src={featuredImpact.videoSrc}
-                    controls
                     playsInline
                     className="w-full h-full object-cover"
-                  />
+                  poster="/images/video-poster.webp" controls preload="none" />
                 </div>
 
                 <div className="p-4 bg-black/40 text-xs text-gray-300 border-t border-white/10 flex items-center justify-between">
                   <span>Location: Naomi Gardens, GRA, Benin City, Edo State</span>
-                  <span className="text-[#087A5B] font-mono font-bold">Verified Outreach Video</span>
+                  <span className="text-[#45BCE7] font-mono font-bold">Verified Outreach Video</span>
                 </div>
               </div>
             </div>
@@ -137,10 +140,9 @@ export default function ImpactPage() {
                   <div className="relative aspect-video bg-neutral-900 overflow-hidden">
                     <video
                       src={activity.videoSrc}
-                      controls
                       playsInline
                       className="w-full h-full object-cover"
-                    />
+                    poster="/images/video-poster.webp" controls preload="none" />
                     <div className="absolute top-2 left-2 bg-[#102A43] text-white font-mono text-[10px] px-2 py-0.5 tracking-wider uppercase">
                       {activity.category}
                     </div>
@@ -186,13 +188,13 @@ export default function ImpactPage() {
           {/* Transparent note regarding ongoing documentation */}
           <div className="mt-16 p-8 bg-white border border-[#E8E8E2] text-center max-w-2xl mx-auto space-y-3">
             <span className="font-mono text-xs uppercase tracking-widest text-[#087A5B] font-bold">
-              Ongoing Field Registry
+              Field Records
             </span>
             <h3 className="font-heading text-xl font-bold text-[#102A43]">
-              More Verified Activities Coming
+              Ask about an outreach
             </h3>
             <p className="text-xs sm:text-sm text-[#6B6B6B] leading-relaxed">
-              We publish reports only after photographs, beneficiary records, and field receipts are verified. To inquire about specific outreach dates or suggest community collaborations, please contact our Benin City office.
+              Contact the Benin City office for details about current activities and available supporting records.
             </p>
             <div className="pt-2">
               <Link

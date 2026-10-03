@@ -29,6 +29,7 @@ export function GalleryGrid({ initialCategory = "All", limit }: GalleryGridProps
 
   return (
     <div>
+      <h2 className="sr-only">Browse documented field records</h2>
       {/* Category Tabs */}
       <div className="flex flex-wrap items-center gap-2 mb-10 pb-4 border-b border-[#E8E8E2]">
         <span className="text-xs uppercase font-mono tracking-widest text-[#6B6B6B] mr-2 flex items-center gap-1.5">
@@ -42,6 +43,7 @@ export function GalleryGrid({ initialCategory = "All", limit }: GalleryGridProps
               key={cat}
               type="button"
               onClick={() => setActiveCategory(cat)}
+              aria-pressed={isActive}
               className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer ${
                 isActive
                   ? "bg-[#102A43] text-white shadow-xs"
@@ -60,17 +62,21 @@ export function GalleryGrid({ initialCategory = "All", limit }: GalleryGridProps
           <div
             key={item.id}
             onClick={() => setSelectedItem(item)}
-            className="group relative bg-white border border-[#E8E8E2] hover:border-[#102A43] transition-all duration-300 flex flex-col cursor-pointer overflow-hidden shadow-xs hover:shadow-md"
+            onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); setSelectedItem(item); } }}
+            role="button"
+            tabIndex={0}
+            className="group relative bg-white border border-[#E8E8E2] hover:border-[#102A43] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#087A5B] transition-all duration-300 flex flex-col cursor-pointer overflow-hidden shadow-xs hover:shadow-md"
           >
             {/* Media thumbnail area */}
             <div className="relative aspect-video bg-neutral-900 overflow-hidden">
               {item.type === "video" ? (
                 <div className="relative w-full h-full">
-                  <video
-                    src={item.mediaSrc}
-                    muted
-                    preload="metadata"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-85 group-hover:opacity-95"
+                  <Image
+                    src={item.posterSrc || "/images/video-poster.webp"}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   {/* Play badge */}
                   <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/10 transition-colors">
@@ -83,7 +89,7 @@ export function GalleryGrid({ initialCategory = "All", limit }: GalleryGridProps
                 <div className="relative w-full h-full">
                   <Image
                     src={item.mediaSrc}
-                    alt={item.placeholderAlt || item.title}
+                    alt={item.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

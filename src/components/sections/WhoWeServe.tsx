@@ -78,7 +78,7 @@ export function WhoWeServe() {
                     href="/our-work"
                     className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider ${
                       isFeatured
-                        ? "text-[#0088C9] group-hover:text-white"
+                        ? "text-[#45BCE7] group-hover:text-white"
                         : "text-[#087A5B] group-hover:text-[#07543F]"
                     } transition-colors`}
                   >

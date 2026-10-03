@@ -31,7 +31,7 @@ export function SupportMission() {
                 <Heart className="w-6 h-6 text-white" />
               </div>
 
-              <span className="font-mono text-xs uppercase tracking-widest text-[#0088C9] font-semibold">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#45BCE7] font-semibold">
                 Action 01
               </span>
               <h3 className="font-heading text-2xl font-bold text-white mt-1 mb-3">

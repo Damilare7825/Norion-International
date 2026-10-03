@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -31,8 +32,8 @@ export const metadata: Metadata = {
     default: "Norion Caritas Foundation | Renew. Empower. Strengthen. Transform.",
     template: "%s | Norion Caritas Foundation",
   },
-  description:
-    "Founded 15 years ago by Nosa Peter Ighodaro with headquarters in Benin City, Edo State, Nigeria. Empowering widows and orphans, bringing the helpless off the streets with physical materials and weekly business grants.",
+  description: "Norion Caritas Foundation supports widows, orphans, and vulnerable people through food relief, practical assistance, and community outreach across Nigeria.",
+  alternates: { canonical: "/" },
   icons: {
     icon: "/icon.png?v=brand-logo",
     shortcut: "/icon.png?v=brand-logo",
@@ -62,10 +63,10 @@ export const metadata: Metadata = {
       "Helping the helpless, bringing people from the street, and empowering widows and orphans across Nigeria for 15 years.",
     images: [
       {
-        url: "/icon.png?v=brand-logo",
-        width: 512,
-        height: 512,
-        alt: "Norion Caritas Foundation Emblem",
+        url: "/images/norion-social-card.webp",
+        width: 1200,
+        height: 630,
+        alt: "Norion Caritas Foundation",
       },
     ],
   },
@@ -74,7 +75,7 @@ export const metadata: Metadata = {
     title: "Norion Caritas Foundation | Renew. Empower. Strengthen. Transform.",
     description:
       "Founded 15 years ago by Nosa Peter Ighodaro. Headquartered in Benin City with centers across Nigeria.",
-    images: ["/icon.png?v=brand-logo"],
+    images: ["/images/norion-social-card.webp"],
   },
   robots: {
     index: true,
@@ -110,7 +111,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable} scroll-smooth`}>
+    <html lang="en-NG" className={`${plusJakartaSans.variable} ${inter.variable} scroll-smooth`}>
       <head>
         <link rel="icon" type="image/png" href="/favicon.png?v=brand-logo" />
         <script
@@ -134,6 +135,7 @@ export default function RootLayout({
         </main>
 
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

@@ -1,14 +1,10 @@
-"use client";
-
-import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Heart, Volume2, VolumeX, ShieldCheck, BookOpen } from "lucide-react";
+import { ArrowRight, Heart, ShieldCheck, BookOpen } from "lucide-react";
 import { organization } from "@/content/organization";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 export function Hero() {
-  const [isMuted, setIsMuted] = useState(true);
 
   return (
     <section className="relative bg-[#102A43] text-white pt-8 pb-16 md:pt-14 md:pb-24 lg:pt-20 lg:pb-32 overflow-hidden border-b border-white/10">
@@ -35,7 +31,7 @@ export function Hero() {
           <div className="lg:col-span-7 space-y-6 md:space-y-8">
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
               Helping the helpless, bringing people from the{" "}
-              <span className="text-[#0088C9] font-normal italic">street</span>{" "}
+              <span className="text-[#45BCE7] font-normal italic">street</span>{" "}
               toward <span className="underline decoration-[#087A5B] decoration-2 underline-offset-8">hope.</span>
             </h1>
 
@@ -45,7 +41,7 @@ export function Hero() {
 
             {/* Foundational Scripture Anchor */}
             <div className="p-4 bg-white/5 border-l-2 border-[#0088C9] text-xs sm:text-sm text-gray-300 space-y-1">
-              <div className="flex items-center gap-2 font-mono text-[#0088C9] font-semibold uppercase text-xs">
+              <div className="flex items-center gap-2 font-mono text-[#45BCE7] font-semibold uppercase text-xs">
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>Foundational Scripture &mdash; {organization.foundingScripture.reference}</span>
               </div>
@@ -59,7 +55,7 @@ export function Hero() {
               <div className="inline-flex flex-wrap items-center gap-2 sm:gap-3 py-2 px-3.5 bg-white/5 border border-white/10 text-xs sm:text-sm font-mono tracking-wider uppercase text-gray-200">
                 <span className="text-[#087A5B] font-bold">RENEW</span>
                 <span className="text-gray-500">•</span>
-                <span className="text-[#0088C9] font-bold">EMPOWER</span>
+                <span className="text-[#45BCE7] font-bold">EMPOWER</span>
                 <span className="text-gray-500">•</span>
                 <span className="text-emerald-400 font-bold">STRENGTHEN</span>
                 <span className="text-gray-500">•</span>
@@ -101,41 +97,19 @@ export function Hero() {
                   <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
                   <span>DOCUMENTARY FOOTAGE</span>
                 </span>
-                <span className="text-[#0088C9]">EDO STATE, NIGERIA</span>
+                <span className="text-[#45BCE7]">EDO STATE, NIGERIA</span>
               </div>
 
               {/* Video Element */}
               <div className="relative aspect-4/3 sm:aspect-16/10 bg-black overflow-hidden group">
                 <video
                   src="/videos/christmas-outreach-2023.mp4"
-                  autoPlay
-                  loop
-                  muted={isMuted}
+                  muted
                   playsInline
+                  poster="/images/christmas-outreach-2023/group-at-christmas-outreach.webp"
+                  aria-label="Christmas outreach video from Benin City"
                   className="w-full h-full object-cover"
-                />
-
-                {/* Video Audio Control Overlay */}
-                <div className="absolute bottom-3 right-3 z-10 flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setIsMuted(!isMuted)}
-                    className="p-2.5 bg-black/70 hover:bg-black text-white text-xs rounded-full backdrop-blur-xs transition-colors flex items-center gap-1.5 focus:outline-none focus:ring-2 focus:ring-[#087A5B]"
-                    aria-label={isMuted ? "Unmute documentary audio" : "Mute documentary audio"}
-                  >
-                    {isMuted ? (
-                      <>
-                        <VolumeX className="w-4 h-4 text-gray-300" />
-                        <span className="text-[11px] font-mono pr-1">Unmute</span>
-                      </>
-                    ) : (
-                      <>
-                        <Volume2 className="w-4 h-4 text-emerald-300" />
-                        <span className="text-[11px] font-mono pr-1">Mute</span>
-                      </>
-                    )}
-                  </button>
-                </div>
+                controls preload="none" />
 
                 <div className="absolute top-3 left-3 bg-[#087A5B] text-white text-[10px] uppercase font-mono px-2 py-0.5 tracking-wider font-semibold">
                   Field Record: 07.12.2023
@@ -149,7 +123,7 @@ export function Hero() {
                 </p>
                 <Link
                   href="/impact#christmas-outreach-widows-2023"
-                  className="inline-flex items-center gap-1 text-[#0088C9] hover:underline text-[11px] font-medium mt-1.5"
+                  className="inline-flex items-center gap-1 text-[#45BCE7] hover:underline text-[11px] font-medium mt-1.5"
                 >
                   <span>Read documented story &amp; watch full video</span>
                   <ArrowRight className="w-3 h-3" />

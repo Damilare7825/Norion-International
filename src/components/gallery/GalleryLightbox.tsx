@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { GalleryMediaItem } from "@/content/gallery";
@@ -18,6 +18,9 @@ export function GalleryLightbox({
   onClose,
   onSelect,
 }: GalleryLightboxProps) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
   const currentIndex = item ? items.findIndex((i) => i.id === item.id) : -1;
   const hasPrev = currentIndex > 0;
   const hasNext = currentIndex >= 0 && currentIndex < items.length - 1;
@@ -35,14 +38,33 @@ export function GalleryLightbox({
   }, [currentIndex, items, onSelect]);
 
   useEffect(() => {
+    if (item && !openerRef.current && document.activeElement instanceof HTMLElement) {
+      openerRef.current = document.activeElement;
+    }
+    if (!item && openerRef.current) {
+      openerRef.current.focus();
+      openerRef.current = null;
+    }
+  }, [item]);
+
+  useEffect(() => {
     if (!item) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowLeft") handlePrev();
       if (e.key === "ArrowRight") handleNext();
+      if (e.key === "Tab") {
+        const nodes = dialogRef.current?.querySelectorAll<HTMLElement>("button:not([disabled]), video[controls], a[href]");
+        if (!nodes?.length) return;
+        const first = nodes[0];
+        const last = nodes[nodes.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
     };
 
+    closeButtonRef.current?.focus();
     window.addEventListener("keydown", handleKeyDown);
     document.body.style.overflow = "hidden";
 
@@ -57,6 +79,7 @@ export function GalleryLightbox({
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-6 md:p-10 backdrop-blur-xs"
+      ref={dialogRef}
       role="dialog"
       aria-modal="true"
       aria-label={`Media viewer for ${item.title}`}
@@ -74,6 +97,7 @@ export function GalleryLightbox({
         onClick={onClose}
         className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-[#087A5B] transition-colors"
         aria-label="Close media preview"
+        ref={closeButtonRef}
       >
         <X className="w-6 h-6" />
       </button>
@@ -109,10 +133,12 @@ export function GalleryLightbox({
           {item.type === "video" ? (
             <video
               key={item.mediaSrc}
-              controls
-              autoPlay
+              aria-label={item.title + " video"}
               playsInline
               className="w-full h-full max-h-[65vh] object-contain"
+              poster={item.posterSrc ?? "/images/video-poster.webp"}
+              controls
+              preload="none"
             >
               <source src={item.mediaSrc} type="video/mp4" />
               Your browser does not support the video tag.
@@ -121,11 +147,11 @@ export function GalleryLightbox({
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
                 src={item.mediaSrc}
-                alt={item.placeholderAlt || item.title}
+                alt={item.title}
                 width={1200}
                 height={800}
                 className="w-full h-full object-contain"
-                priority
+                sizes="(max-width: 768px) 100vw, 80vw"
               />
             </div>
           )}
@@ -139,7 +165,7 @@ export function GalleryLightbox({
                 {item.category}
               </span>
               <span className="text-gray-400">•</span>
-              <span className="text-[#0088C9] font-medium">{item.dateBadge}</span>
+              <span className="text-[#45BCE7] font-medium">{item.dateBadge}</span>
               <span className="text-gray-400">•</span>
               <span className="text-gray-300">{item.locationBadge}</span>
             </div>

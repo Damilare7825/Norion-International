@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   title: "Contact Us | Founder Nosa Peter Ighodaro & Headquarters",
   description:
     "Get in touch directly with Norion Caritas Foundation. National headquarters located in Blessed Ighodaro Estate, Benin City, Edo State, Nigeria, with centers all over Nigeria.",
+  alternates: { canonical: "/contact" },
+  openGraph: { type: "website", locale: "en_NG", siteName: "Norion Caritas Foundation", title: "Contact Us | Founder Nosa Peter Ighodaro & Headquarters", description: "Get in touch directly with Norion Caritas Foundation. National headquarters located in Blessed Ighodaro Estate, Benin City, Edo State, Nigeria, with centers all over Nigeria.", url: "/contact" },
+  twitter: { card: "summary_large_image", title: "Contact Us | Founder Nosa Peter Ighodaro & Headquarters", description: "Get in touch directly with Norion Caritas Foundation. National headquarters located in Blessed Ighodaro Estate, Benin City, Edo State, Nigeria, with centers all over Nigeria.", images: ["/images/norion-social-card.webp"] },
+
 };
 
 export default function ContactPage() {
@@ -112,7 +116,7 @@ export default function ContactPage() {
                 {/* UK WhatsApp & Email */}
                 <div className="p-6 bg-white border border-[#E8E8E2] space-y-4 hover:border-[#0088C9] transition-colors shadow-xs">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-[#0088C9]/10 text-[#0088C9] flex items-center justify-center">
+                    <div className="w-10 h-10 bg-[#0088C9]/10 text-[#006A94] flex items-center justify-center">
                       <MessageCircle className="w-5 h-5" />
                     </div>
                     <div>
@@ -128,7 +132,7 @@ export default function ContactPage() {
                       href={organization.contact.phones.ukWhatsAppUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-[#0088C9] hover:bg-[#0070a8] text-white text-xs font-semibold uppercase tracking-wider transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-[#006A94] hover:bg-[#005576] text-white text-xs font-semibold uppercase tracking-wider transition-colors"
                     >
                       <MessageCircle className="w-3.5 h-3.5" />
                       <span>Message UK Line</span>
@@ -151,7 +155,7 @@ export default function ContactPage() {
                     <User className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-widest text-[#0088C9] font-bold block">
+                    <span className="text-xs font-mono uppercase tracking-widest text-[#45BCE7] font-bold block">
                       Founder &amp; Leadership
                     </span>
                     <h3 className="font-heading text-2xl font-bold text-white">
@@ -197,7 +201,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="p-4 bg-white border border-[#E8E8E2] space-y-1">
-                    <span className="font-mono font-bold text-[#0088C9] uppercase tracking-wider block">
+                    <span className="font-mono font-bold text-[#006A94] uppercase tracking-wider block">
                       Lagos &amp; Other State Branches
                     </span>
                     <p className="text-[#6B6B6B]">Centers and prayer branches where we pray for people, distribute physical materials, and help the helpless.</p>

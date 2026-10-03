@@ -98,12 +98,12 @@ export function OurWorkList() {
                   <video
                     key={activeProgram.featuredVideo}
                     src={activeProgram.featuredVideo}
-                    autoPlay
-                    loop
-                    muted
+                    poster={activeProgram.posterSrc ?? "/images/video-poster.webp"}
+                        muted
                     playsInline
                     className="w-full h-full object-cover"
-                  />
+                          controls
+                          preload="none" />
                   <div className="absolute bottom-2 left-2 bg-black/70 text-white font-mono text-[10px] px-2 py-0.5 tracking-wider uppercase">
                     Field Recording
                   </div>

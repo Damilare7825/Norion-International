@@ -22,7 +22,7 @@ export function YearsOfService() {
             <SectionLabel number="02" label="Enduring Commitment" light />
             
             <div className="mt-2 flex items-baseline gap-2">
-              <span className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-[#0088C9] tracking-tighter leading-none">
+              <span className="font-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold text-[#45BCE7] tracking-tighter leading-none">
                 15+
               </span>
               <span className="text-xl sm:text-2xl font-mono text-gray-300 uppercase tracking-widest font-semibold">
@@ -57,7 +57,7 @@ export function YearsOfService() {
               </div>
 
               <div className="p-6 bg-white/5 border border-white/10 flex flex-col justify-between hover:border-[#0088C9] transition-colors">
-                <div className="w-10 h-10 bg-[#0088C9]/20 border border-[#0088C9] flex items-center justify-center text-[#0088C9] mb-6">
+                <div className="w-10 h-10 bg-[#0088C9]/20 border border-[#0088C9] flex items-center justify-center text-[#45BCE7] mb-6">
                   <Users2 className="w-5 h-5 text-sky-300" />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export function YearsOfService() {
 
             <div className="mt-8 flex items-center justify-between p-4 bg-white/5 border border-white/10 text-xs text-gray-300 font-mono">
               <span>Verified Fact: Operating for ~15 years without interruption</span>
-              <Link href="/about" className="text-[#0088C9] hover:underline flex items-center gap-1 font-semibold">
+              <Link href="/about" className="text-[#45BCE7] hover:underline flex items-center gap-1 font-semibold">
                 <span>Discover Our Journey</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>

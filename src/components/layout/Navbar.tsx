@@ -65,7 +65,7 @@ export function Navbar() {
             <div className="hidden sm:flex items-center gap-4 text-gray-300">
               <span>{organization.yearsOfService}</span>
               <span className="text-gray-500">•</span>
-              <span className="text-[#0088C9] font-medium tracking-widest">{organization.tagline}</span>
+              <span className="text-[#45BCE7] font-medium tracking-widest">{organization.tagline}</span>
             </div>
           </div>
         </div>
@@ -78,15 +78,15 @@ export function Navbar() {
               href="/"
               onClick={closeMenu}
               className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#087A5B]"
-              aria-label="Norion Caritas Foundation Home"
             >
               {/* Official Norion Logo Image */}
               <div className="relative w-12 h-12 md:w-14 md:h-14 shrink-0 bg-white border border-[#E8E8E2] p-1 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-xs">
                 <Image
-                  src="/images/norion-logo.jpg"
+                  src="/images/norion-logo.webp"
                   alt="Norion International / Norion Caritas Foundation Official Logo"
                   width={56}
                   height={56}
+                  sizes="56px"
                   className="object-contain w-full h-full"
                   priority
                 />
@@ -175,15 +175,16 @@ export function Navbar() {
             <div className="mb-6 pb-4 border-b border-white/10 flex items-center gap-3">
               <div className="w-10 h-10 bg-white p-1 shrink-0">
                 <Image
-                  src="/images/norion-logo.jpg"
+                  src="/images/norion-logo.webp"
                   alt="Norion Logo"
                   width={40}
                   height={40}
+                  sizes="40px"
                   className="object-contain w-full h-full"
                 />
               </div>
               <div>
-                <span className="text-xs uppercase tracking-[0.2em] text-[#0088C9] font-mono block">
+                <span className="text-xs uppercase tracking-[0.2em] text-[#006A94] font-mono block">
                   {organization.name}
                 </span>
                 <p className="text-xs text-gray-300 mt-0.5">
@@ -229,7 +230,7 @@ export function Navbar() {
           <div className="px-6 py-6 bg-black/20 border-t border-white/10 text-xs text-gray-400 space-y-2">
             <p>
               <strong className="text-gray-300">Nigeria WhatsApp:</strong>{" "}
-              <a href={organization.contact.phones.nigeriaWhatsAppUrl} className="text-[#0088C9] underline">
+              <a href={organization.contact.phones.nigeriaWhatsAppUrl} className="text-[#006A94] underline">
                 {organization.contact.phones.nigeriaDisplay}
               </a>
             </p>

@@ -7,6 +7,11 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Informational Transparency",
   description:
     "Privacy and data policy for Norion Caritas Foundation. We operate an informational website with no user tracking, advertising cookies, or personal data collection.",
+  alternates: { canonical: "/privacy" },
+  openGraph: { type: "website", locale: "en_NG", siteName: "Norion Caritas Foundation", title: "Privacy Policy | Informational Transparency", description: "Privacy and data policy for Norion Caritas Foundation. We operate an informational website with no user tracking, advertising cookies, or personal data collection.", url: "/privacy" },
+  twitter: { card: "summary_large_image", title: "Privacy Policy | Informational Transparency", description: "Privacy and data policy for Norion Caritas Foundation. We operate an informational website with no user tracking, advertising cookies, or personal data collection.", images: ["/images/norion-social-card.webp"] },
+  robots: { index: false, follow: true },
+
 };
 
 export default function PrivacyPage() {

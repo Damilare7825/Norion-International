@@ -1,14 +1,9 @@
-"use client";
-
-import React, { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { organization } from "@/content/organization";
 import { ArrowUpRight } from "lucide-react";
 
 export function FourPillars() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <section className="py-24 md:py-32 bg-[#F7F7F4] border-b border-[#E8E8E2]">
       <Container>
@@ -27,17 +22,10 @@ export function FourPillars() {
 
         {/* Editorial Numbered Rows (Not generic cards) */}
         <div className="border-t border-[#171717]/15">
-          {organization.corePillars.map((pillar, idx) => {
-            const isHovered = hoveredIndex === idx;
-
-            return (
+          {organization.corePillars.map((pillar) => (
               <div
                 key={pillar.word}
-                onMouseEnter={() => setHoveredIndex(idx)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className={`group border-b border-[#171717]/15 py-8 md:py-12 transition-all duration-300 px-4 md:px-6 cursor-default ${
-                  isHovered ? "bg-white shadow-xs" : "bg-transparent"
-                }`}
+                className="group border-b border-[#171717]/15 py-8 md:py-12 transition-all duration-300 px-4 md:px-6 cursor-default bg-transparent group-hover:bg-white group-hover:shadow-xs"
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline">
                   {/* Editorial Number */}
@@ -46,9 +34,7 @@ export function FourPillars() {
                       {pillar.number}
                     </span>
                     <span
-                      className={`h-px transition-all duration-300 ${
-                        isHovered ? "w-8 bg-[#087A5B]" : "w-4 bg-[#171717]/30"
-                      }`}
+                      className="h-px w-4 bg-[#171717]/30 transition-all duration-300 group-hover:w-8 group-hover:bg-[#087A5B]"
                     />
                   </div>
 
@@ -69,18 +55,13 @@ export function FourPillars() {
                   {/* Subtle Arrow indicator */}
                   <div className="md:col-span-1 hidden md:flex justify-end">
                     <ArrowUpRight
-                      className={`w-6 h-6 transition-all duration-300 ${
-                        isHovered
-                          ? "text-[#087A5B] translate-x-1 -translate-y-1 opacity-100"
-                          : "text-gray-300 opacity-40"
-                      }`}
+                      className="w-6 h-6 text-gray-300 opacity-40 transition-all duration-300 group-hover:text-[#087A5B] group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:opacity-100"
                       aria-hidden="true"
                     />
                   </div>
                 </div>
               </div>
-            );
-          })}
+          ))}
         </div>
       </Container>
     </section>

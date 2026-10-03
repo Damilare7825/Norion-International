@@ -17,7 +17,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
             <div className="max-w-2xl">
-              <span className="text-[#0088C9] font-mono text-xs uppercase tracking-[0.25em] font-semibold">
+              <span className="text-[#45BCE7] font-mono text-xs uppercase tracking-[0.25em] font-semibold">
                 Direct Humanitarian Support
               </span>
               <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white mt-2">
@@ -56,10 +56,11 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-white p-1 shrink-0 border border-white/20">
                 <Image
-                  src="/images/norion-logo.jpg"
+                  src="/images/norion-logo.webp"
                   alt="Norion International / Norion Caritas Foundation Logo"
                   width={48}
                   height={48}
+                  sizes="48px"
                   className="object-contain w-full h-full"
                 />
               </div>
@@ -82,7 +83,7 @@ export function Footer() {
             </blockquote>
 
             <div className="p-4 bg-white/5 border border-white/10 space-y-2 text-xs">
-              <span className="font-mono text-[#0088C9] uppercase tracking-wider font-semibold block">
+              <span className="font-mono text-[#45BCE7] uppercase tracking-wider font-semibold block">
                 Official Bank Information:
               </span>
               <p className="text-white font-medium">
@@ -99,7 +100,7 @@ export function Footer() {
 
           {/* About Links */}
           <div className="space-y-4">
-            <h4 className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#0088C9]">
+            <h4 className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#45BCE7]">
               Organization
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
@@ -115,7 +116,7 @@ export function Footer() {
 
           {/* Focus Links */}
           <div className="space-y-4">
-            <h4 className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#0088C9]">
+            <h4 className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#45BCE7]">
               Our Focus
             </h4>
             <ul className="space-y-2.5 text-sm text-gray-300">
@@ -131,7 +132,7 @@ export function Footer() {
 
           {/* Contact Details */}
           <div className="space-y-4">
-            <h4 className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#0088C9]">
+            <h4 className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#45BCE7]">
               Headquarters
             </h4>
             <ul className="space-y-3 text-xs text-gray-300">
@@ -149,7 +150,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <MessageCircle className="w-4 h-4 text-[#0088C9] shrink-0" aria-hidden="true" />
+                <MessageCircle className="w-4 h-4 text-[#45BCE7] shrink-0" aria-hidden="true" />
                 <a
                   href={organization.contact.phones.nigeriaWhatsAppUrl}
                   target="_blank"
@@ -160,7 +161,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <MessageCircle className="w-4 h-4 text-[#0088C9] shrink-0" aria-hidden="true" />
+                <MessageCircle className="w-4 h-4 text-[#45BCE7] shrink-0" aria-hidden="true" />
                 <a
                   href={organization.contact.phones.ukWhatsAppUrl}
                   target="_blank"
@@ -210,6 +211,9 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p>
             © {new Date().getFullYear()} {organization.name}. Headquartered in Benin City, Edo State. Centers nationwide.
+          </p>
+          <p className="text-gray-400">
+            Made by <span className="font-semibold text-white">MarvinsStack</span>
           </p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">

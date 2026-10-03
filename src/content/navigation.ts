@@ -44,7 +44,7 @@ export const socialMediaLinks = [
   {
     platform: "Facebook",
     handle: "Peter Nosa Ighodaro",
-    // Configurable URL placeholder ready for exact profile link
+    // Uses Facebook search until the foundation profile URL is confirmed.
     href: "https://www.facebook.com/search/top?q=Peter%20Nosa%20Ighodaro",
     isConfigured: true,
   },

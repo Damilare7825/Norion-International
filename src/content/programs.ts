@@ -6,8 +6,8 @@ export interface ProgramItem {
   fullDescription: string;
   keyActions: string[];
   editorialQuote: string;
-  imagePlaceholderText: string;
-  featuredVideo?: string;
+  featuredVideo: string;
+  posterSrc: string;
 }
 
 export const programs: ProgramItem[] = [
@@ -26,7 +26,7 @@ export const programs: ProgramItem[] = [
       "Physical materials and welfare support to lift widows out of distress",
     ],
     editorialQuote: "And laid them down at the apostles' feet: and distribution was made unto every man according as he had need. — Acts 4:35",
-    imagePlaceholderText: "Documentary footage: Widows receiving food supplies, cash grants, and praying together",
+    posterSrc: "/images/christmas-outreach-2023/group-at-christmas-outreach.webp",
     featuredVideo: "/videos/christmas-outreach-2023.mp4",
   },
   {
@@ -44,7 +44,7 @@ export const programs: ProgramItem[] = [
       "Protection, advocacy, and guidance for at-risk youth",
     ],
     editorialQuote: "Our mission is to reach those living in the streets, restore their dignity, and show them true love in action.",
-    imagePlaceholderText: "Documentary footage: Community support and material provision to vulnerable youth",
+    posterSrc: "/images/video-poster.webp",
     featuredVideo: "/videos/vulnerable-care-assessment.mp4",
   },
   {
@@ -62,7 +62,7 @@ export const programs: ProgramItem[] = [
       "Expanding centers and prayer branches into additional Nigerian states",
     ],
     editorialQuote: "Every Saturday in Abuja and across states, we put faith into action by funding businesses and lifting people in prayer.",
-    imagePlaceholderText: "Documentary footage: Field outreach in suburban and rural Nigerian communities",
+    posterSrc: "/images/christmas-outreach-2023/widow-business-support.webp",
     featuredVideo: "/videos/abuja-community-outreach.mp4",
   },
   {
@@ -80,7 +80,7 @@ export const programs: ProgramItem[] = [
       "Empowering families to move permanently from poverty to self-reliance",
     ],
     editorialQuote: "When you give someone the money to start a business, you take them off the street forever.",
-    imagePlaceholderText: "Documentary footage: Presentation of micro-business capital to market beneficiaries",
+    posterSrc: "/images/christmas-outreach-2023/food-provisions.webp",
     featuredVideo: "/videos/business-grant-empowerment.mp4",
   },
   {
@@ -98,7 +98,7 @@ export const programs: ProgramItem[] = [
       "Swift, respectful relief directly to the hands of beneficiaries",
     ],
     editorialQuote: "Distribution made unto every man according as he had need. — Acts 4:35",
-    imagePlaceholderText: "Documentary footage: Foodstuff and yam distribution directly to widows",
+    posterSrc: "/images/video-poster.webp",
     featuredVideo: "/videos/food-distribution-widows.mp4",
   },
   {
@@ -116,7 +116,7 @@ export const programs: ProgramItem[] = [
       "A compassionate family network where no one suffers alone",
     ],
     editorialQuote: "We have branches where we pray for people, lift their burdens, and release God's transforming grace.",
-    imagePlaceholderText: "Documentary footage: Widows and community members gathered in vibrant worship and prayer",
+    posterSrc: "/images/video-poster.webp",
     featuredVideo: "/videos/widows-worship-support.mp4",
   },
 ];

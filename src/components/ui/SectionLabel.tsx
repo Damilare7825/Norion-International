@@ -18,7 +18,7 @@ export function SectionLabel({
       {number && (
         <span
           className={`font-mono text-xs tracking-wider font-semibold ${
-            light ? "text-[#0088C9]" : "text-[#087A5B]"
+            light ? "text-[#45BCE7]" : "text-[#087A5B]"
           }`}
         >
           {number}

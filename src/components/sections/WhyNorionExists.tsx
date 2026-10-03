@@ -77,12 +77,10 @@ export function WhyNorionExists() {
               <div className="relative aspect-video bg-neutral-900 border border-[#E8E8E2] overflow-hidden group">
                 <video
                   src="/videos/food-distribution-widows.mp4"
-                  autoPlay
-                  loop
                   muted
                   playsInline
                   className="w-full h-full object-cover"
-                />
+                poster="/images/video-poster.webp" controls preload="none" />
                 <div className="absolute top-3 left-3 bg-[#102A43] text-white text-[10px] font-mono px-2 py-0.5 tracking-wider uppercase">
                   Direct Field Assistance
                 </div>

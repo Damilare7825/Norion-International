@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "Our Work | Six Verified Humanitarian Pillars",
   description:
     "Explore the six core pillars of Norion Caritas Foundation: Widow Empowerment, Orphan Support, Community Outreach, Business Grants, Material Assistance, and Prayer Support.",
+  alternates: { canonical: "/our-work" },
+  openGraph: { type: "website", locale: "en_NG", siteName: "Norion Caritas Foundation", title: "Our Work | Six Verified Humanitarian Pillars", description: "Explore the six core pillars of Norion Caritas Foundation: Widow Empowerment, Orphan Support, Community Outreach, Business Grants, Material Assistance, and Prayer Support.", url: "/our-work" },
+  twitter: { card: "summary_large_image", title: "Our Work | Six Verified Humanitarian Pillars", description: "Explore the six core pillars of Norion Caritas Foundation: Widow Empowerment, Orphan Support, Community Outreach, Business Grants, Material Assistance, and Prayer Support.", images: ["/images/norion-social-card.webp"] },
+
 };
 
 export default function OurWorkPage() {
@@ -115,21 +119,13 @@ export default function OurWorkPage() {
                   >
                     <div className="relative bg-white border border-[#E8E8E2] p-3 shadow-md">
                       <div className="relative aspect-4/3 bg-neutral-900 overflow-hidden">
-                        {program.featuredVideo ? (
-                          <video
-                            src={program.featuredVideo}
-                            controls
-                            playsInline
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-[#102A43] text-white">
-                            <span className="font-mono text-xs uppercase text-[#0088C9] mb-2">
-                              Photo Archive Slot
-                            </span>
-                            <p className="text-sm font-semibold">{program.imagePlaceholderText}</p>
-                          </div>
-                        )}
+                        <video
+                          src={program.featuredVideo}
+                          poster={program.posterSrc ?? "/images/video-poster.webp"}
+                          playsInline
+                          className="w-full h-full object-cover"
+                          controls
+                          preload="none" />
                       </div>
 
                       <div className="p-3 bg-neutral-50 text-[11px] font-mono text-[#6B6B6B] flex items-center justify-between border-t border-[#E8E8E2] mt-2">

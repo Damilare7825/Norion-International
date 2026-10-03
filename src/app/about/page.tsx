@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: "About Us | Founder Nosa Peter Ighodaro & Our 15-Year Story",
   description:
     "Norion Caritas Foundation was founded 15 years ago by Nosa Peter Ighodaro. Headquartered in Benin City, Edo State with centers all over Nigeria, empowering widows, orphans, and bringing the helpless off the streets.",
+  alternates: { canonical: "/about" },
+  openGraph: { type: "website", locale: "en_NG", siteName: "Norion Caritas Foundation", title: "About Us | Founder Nosa Peter Ighodaro & Our 15-Year Story", description: "Norion Caritas Foundation was founded 15 years ago by Nosa Peter Ighodaro. Headquartered in Benin City, Edo State with centers all over Nigeria, empowering widows, orphans, and bringing the helpless off the streets.", url: "/about" },
+  twitter: { card: "summary_large_image", title: "About Us | Founder Nosa Peter Ighodaro & Our 15-Year Story", description: "Norion Caritas Foundation was founded 15 years ago by Nosa Peter Ighodaro. Headquartered in Benin City, Edo State with centers all over Nigeria, empowering widows, orphans, and bringing the helpless off the streets.", images: ["/images/norion-social-card.webp"] },
+
 };
 
 export default function AboutPage() {
@@ -41,10 +45,11 @@ export default function AboutPage() {
               </h2>
               <figure className="overflow-hidden border border-[#E8E8E2] bg-[#F7F7F4]">
                 <Image
-                  src="/images/founder-nosa-ighodaro.jpg"
+                  src="/images/founder-nosa-ighodaro.webp"
                   alt="Founder Nosa Peter Ighodaro"
                   width={405}
                   height={600}
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="w-full h-auto object-cover"
                   priority
                 />
@@ -53,7 +58,7 @@ export default function AboutPage() {
                 </figcaption>
               </figure>
               <div className="p-6 bg-[#102A43] text-white border border-[#102A43] space-y-3">
-                <span className="font-mono text-xs uppercase tracking-widest text-[#0088C9] font-bold">
+                <span className="font-mono text-xs uppercase tracking-widest text-[#45BCE7] font-bold">
                   Founder
                 </span>
                 <p className="font-heading text-2xl font-bold text-white">
@@ -102,7 +107,7 @@ export default function AboutPage() {
                   <span className="text-[11px] font-mono uppercase text-[#6B6B6B]">Headquarters</span>
                 </div>
                 <div className="p-3 bg-[#F7F7F4] border border-[#E8E8E2]">
-                  <span className="font-heading font-extrabold text-xl text-[#0088C9] block">Saturdays</span>
+                  <span className="font-heading font-extrabold text-xl text-[#006A94] block">Saturdays</span>
                   <span className="text-[11px] font-mono uppercase text-[#6B6B6B]">Abuja Grants</span>
                 </div>
                 <div className="p-3 bg-[#F7F7F4] border border-[#E8E8E2]">

@@ -53,7 +53,7 @@ export function WhereWeServe() {
             </p>
 
             <div className="p-4 bg-[#102A43] text-white border border-[#102A43] space-y-2">
-              <div className="flex items-center gap-2 text-xs font-mono text-[#0088C9] font-bold uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-xs font-mono text-[#45BCE7] font-bold uppercase tracking-wider">
                 <Calendar className="w-4 h-4 text-emerald-300" />
                 <span>Weekly Flagship Outreach:</span>
               </div>
@@ -93,7 +93,7 @@ export function WhereWeServe() {
                 </div>
 
                 <div className="pl-6.5 space-y-1.5">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#0088C9] block">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#006A94] block">
                     {loc.focus}
                   </span>
                   <p className="text-sm text-[#6B6B6B] leading-relaxed">

@@ -9,7 +9,6 @@ export interface ImpactActivity {
   summary: string;
   details: string[];
   videoSrc?: string;
-  imagePlaceholder: string;
   verifiedNotes: string;
 }
 
@@ -31,7 +30,6 @@ export const featuredImpact: ImpactActivity = {
     "Coordinated on the ground by Founder Nosa Peter Ighodaro and Rev. Mrs. Nosa Ighodaro",
   ],
   videoSrc: "/videos/christmas-outreach-2023.mp4",
-  imagePlaceholder: "Documentary photograph: Widows presenting startup fund envelopes with joy at Naomi Gardens",
   verifiedNotes:
     "Documented field activity verified through official video records and attendee photographic documentation.",
 };
@@ -55,7 +53,6 @@ export const documentedActivities: ImpactActivity[] = [
       "Distribution made unto every person according as they have need (Acts 4:35)",
     ],
     videoSrc: "/videos/abuja-community-outreach.mp4",
-    imagePlaceholder: "Documentary photograph: Saturday business startup distribution and prayer assembly in Abuja",
     verifiedNotes: "Regular weekly Saturday outreach in Abuja.",
   },
   {
@@ -74,7 +71,6 @@ export const documentedActivities: ImpactActivity[] = [
       "Connecting street youth and struggling parents to supportive community centers",
     ],
     videoSrc: "/videos/widows-worship-support.mp4",
-    imagePlaceholder: "Documentary photograph: Community outreach and prayer assembly in Lagos",
     verifiedNotes: "Ongoing outreach across Lagos communities.",
   },
   {
@@ -93,7 +89,6 @@ export const documentedActivities: ImpactActivity[] = [
       "Immediate alleviation of household food deficits without bureaucratic delays",
     ],
     videoSrc: "/videos/food-distribution-widows.mp4",
-    imagePlaceholder: "Documentary photograph: Distribution of yams and provisions to local widows",
     verifiedNotes: "Verified via on-site field recording.",
   },
   {
@@ -112,7 +107,6 @@ export const documentedActivities: ImpactActivity[] = [
       "Celebratory dancing and shared praise among market women",
     ],
     videoSrc: "/videos/business-grant-empowerment.mp4",
-    imagePlaceholder: "Documentary photograph: Market women celebrating after receiving business startup funds",
     verifiedNotes: "Verified via on-ground video documentation.",
   },
   {
@@ -131,7 +125,6 @@ export const documentedActivities: ImpactActivity[] = [
       "Planning structured intervention for housing and startup funds",
     ],
     videoSrc: "/videos/field-outreach-visitation.mp4",
-    imagePlaceholder: "Documentary photograph: Inspection of living conditions in underserved settlement",
     verifiedNotes: "Verified via on-ground documentary footage.",
   },
 ];
