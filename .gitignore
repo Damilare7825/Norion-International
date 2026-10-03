@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Original source media (curated copies are in public/images and public/videos)
+/Norion videos/
